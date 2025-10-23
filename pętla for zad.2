@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include<math.h>
+int main() 
+{
+int N,i,petla;
+float x,wynik;
+wynik=0;
+scanf("%d",&N);
+scanf("%f",&x);
+    for(petla=1;petla<=N;petla++)
+    {
+    if(x>=0)
+        wynik=wynik+(pow(x,(1.0/5))*sin(-5*x));
+    else
+        wynik=wynik+(pow(fabs(x),1.0/5)*sin(-5*x));
+        
+    }
+printf("%f",wynik);
+
+}
