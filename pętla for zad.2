@@ -7,13 +7,11 @@ float wynik;
 wynik=0;
 scanf("%d",&N);
 scanf("%d",&x);
-    for(petla=-5;petla<=N;petla++)
+    for(petla=(-5);petla<=N;petla++)
     {
-    if(x>=0)
-    	if(petla>=0)
+
         	wynik=wynik+(pow(x,petla)*(sin(petla*x)));
-        else
-        	wynik=wynik+(pow(x,(1.0/-petla))*(sin(petla*x)));
+
     }
 if(wynik<0)
 printf("%f",-wynik);
