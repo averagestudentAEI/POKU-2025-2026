@@ -2,19 +2,22 @@
 #include<math.h>
 int main() 
 {
-int N,i,petla;
-float x,wynik;
+int N,x,petla;
+float wynik;
 wynik=0;
 scanf("%d",&N);
-scanf("%f",&x);
-    for(petla=1;petla<=N;petla++)
+scanf("%d",&x);
+    for(petla=-5;petla<=N;petla++)
     {
     if(x>=0)
-        wynik=wynik+(pow(x,(1.0/5))*sin(-5*x));
-    else
-        wynik=wynik+(pow(fabs(x),1.0/5)*sin(-5*x));
-        
+    	if(petla>=0)
+        	wynik=wynik+(pow(x,petla)*(sin(petla*x)));
+        else
+        	wynik=wynik+(pow(x,(1.0/-petla))*(sin(petla*x)));
     }
+if(wynik<0)
+printf("%f",-wynik);
+else
 printf("%f",wynik);
 
 }
