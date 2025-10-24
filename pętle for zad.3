@@ -1,0 +1,30 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<math.h>
+int main()
+ {
+int Np,Nk,i;
+float ai,najmniejsza;
+najmniejsza=0;
+scanf("%d",&Np);
+scanf("%d",&Nk);
+	if(Nk>Np)
+	{
+		for(i=1;i<=Nk;i++)
+		{
+			ai=-pow(i,2)+(15*i)+50;
+			najmniejsza=-pow(i,2)+(15*i)+50;
+			if(najmniejsza>ai)
+			najmniejsza=ai;
+			
+			if(i>=Np)
+			{
+				printf("%f\n",ai);
+			}
+			
+		}
+		printf("najmniejsza=%f",najmniejsza);
+	}
+    else
+    printf("nuh uh");
+}
