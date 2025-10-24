@@ -1,0 +1,20 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<math.h>
+int main() {
+    float ai,a0,a1,a2;
+    int N,i;
+    scanf("%d",&N);
+    a0=1;
+    a1=1.5;
+    a2=2;
+    for(i=1;i<=N;i++)
+        {
+            ai=a0*(sqrt(a1+a2));
+            a2=a1;
+            a1=a0;
+            a0=ai;
+        }
+    printf("ostatni wyraz=%f",ai);
+    
+}
