@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+int d,x,suma,k,p,iloczyn; float aryt;
+suma=0;
+k=0;
+p=0;
+iloczyn=1;
+scanf("%d",&x);
+if(x>0)
+
+	do
+	{
+		suma=suma+x;
+		k++;
+			if(x<5&&x>10)
+				d++;
+			else
+				iloczyn*=x;
+			if(x%2==0)
+			p++;
+		scanf("%d",&x);
+
+		
+	}
+		while(x>0);
+else
+	
+aryt=suma/k;
+printf("%d\n",suma);
+printf("%f\n",aryt);
+printf("%d\n %d",iloczyn,p);	
+
+	
+}
