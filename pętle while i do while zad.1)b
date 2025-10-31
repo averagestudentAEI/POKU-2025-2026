@@ -12,7 +12,7 @@ main()
 		{
 			x2=pow(x,2.0);
 		x3=pow(x,3.0);
-		printf("%f\n %f\n %f\n",x,x2,x3);
+		printf("%.4f\n %.4f\n %f.4\n",x,x2,x3);
 		x=x+dx;
 		i=i+dx;
 		}
