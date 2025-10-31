@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	int xp,xk; float pzx,i,dx,wynik,x;
+	printf("dawaj xp,xk,dx");
+	scanf("%d %d %f",&xp,&xk,&dx);
+	x=xp;
+	for(i=xp;i<=xk+dx;i=i+dx)
+	{
+		if(x<0)
+			wynik=(x*x*x)+(1/x);
+		else
+			if(x==0)
+				wynik=3*pow(2,1.0/2);
+			else
+				if(x>0)
+				{
+					pzx=sin(pow(x,1.0/2));
+					wynik=pow(pzx,1.0/3);
+				}
+					
+		printf("%f\n",wynik);
+		x=x+dx;
+	}
+}
