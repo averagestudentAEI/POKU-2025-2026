@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	int it,N,n; float x,log,y,epsilon,epsilon1;
+	printf("dawaj wpierw N a potem x gdzie x<1 i x>0 no i epsylon");
+	scanf("%d%f%f",&N,&x,&epsilon);
+	if(fabs(x)<=1)
+{
+	
+	log=0;
+	n=0;
+	do
+	{
+		y  = ((pow(-1,n)*pow(x,n+1))/(n+1));
+		log=log+y;
+		n++;
+		printf("%f\n",log);
+	}
+	while(n<=N&&fabs(y)>epsilon);
+	if(n==N)
+	printf("osiagnieto epsilon w %d iteracjach",n);
+	else
+	
+	printf("osiagnieto epsilon w %d iteracjach z dokladnoscia %f",n,epsilon1);
+}
+else
+	printf("nuh uh");
+}
