@@ -1,0 +1,18 @@
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+#include<string.h>
+main()
+{
+	int i,dg;
+	char zmienna;
+	char lancuch[10];
+	dg=strlen(lancuch);
+	char lancuch2[10];
+	gets(lancuch);
+	for(i=0;i<=dg;i++)
+	lancuch2[i]=lancuch[i];
+	puts(lancuch2);
+
+	
+}
