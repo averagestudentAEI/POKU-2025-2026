@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<string.h>
+
+		struct punkt{
+		float x;
+		float y;
+	};
+	
+	struct okrag{
+		float r;
+		 struct punkt srodek;
+	};
+	
+	struct kwadrat{
+		struct punkt p1;
+		struct punkt p2;
+	};
+	
+main()
+{	
+	 struct punkt A,B;
+	 struct okrag O;
+	 struct kwadrat K;
+	float dx,dy;//rozniza wspolzednych punktow
+	float odleglosc,przekatna,polekwadratu;
+	float pi,polek;
+	pi=3.14;
+	polek=0;
+	//odleglosc miedzy pktami
+	printf("dla pkt A");
+	scanf("%f %f",&A.x,&A.y);
+		printf("dla pkt B");
+	scanf("%f %f",&B.x,&B.y);
+	dx=A.x-B.x;
+	dy=A.y-B.y;
+	odleglosc=sqrt(dx*dx-dy*dy);
+	printf("odlegloscy miedzy pktami=%f\n",odleglosc);
+	//pola kola
+	printf("podaj promien kola");
+	scanf("%f",&O.r);
+	printf("podaj srodek okrengu x,y");
+	scanf("%f %f",&O.srodek.x,&O.srodek.y);
+	polek=pi*O.r*O.r;
+	printf("pole kola=%f\n",polek);
+	//kwadrat cholera wie czego
+		printf("polozenie pkt 1 przekatnej");
+	scanf("%f %f",&K.p1.x, &K.p1.y);
+		printf("polozenie pkt 2 przekatnej");
+	scanf("%f %f",&K.p2.x, &K.p2.y);
+	dx=0;
+	dy=0;
+	dx=K.p1.x-K.p2.x;
+	dy=K.p1.y-K.p2.y;
+	przekatna=0;
+	przekatna=sqrt(dx*dx-dy*dy);
+	polekwadratu=0;
+	polekwadratu=(przekatna*przekatna)/2.0;
+	printf("pole kwadratu=%f\n",polekwadratu);
+}
