@@ -1,0 +1,21 @@
+#include<math.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int f(int x1,int x2,int x3,int x4)
+{
+	int wyznacznik;
+	wyznacznik=(x1*x4)-(x3*x2);
+
+	return (wyznacznik);
+}
+main()
+{
+		int x1,x2,x3,x4,wynik;
+	printf("podaj 2x i 2y");
+	scanf("%d %d %d %d",&x1,&x2,&x3,&x4);
+	wynik=f(x1,x2,x3,x4);
+	 printf("%d",wynik);
+	
+}
