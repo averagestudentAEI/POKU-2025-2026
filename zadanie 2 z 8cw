@@ -1,0 +1,33 @@
+#include<math.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+float f(float x0,float y0)
+{
+	float funkcja;
+	funkcja=0;
+	if(x0<y0)
+	funkcja=(2*x0)+(2*y0);
+	else if(x0=y0)
+	funkcja=3;
+	else if(x0>y0)
+	funkcja=(x0*x0)-sin(y0);
+	return(funkcja);
+}
+main()
+{
+float x1,y1,x0,suma,y0,dx,dy;
+int Np,Nk,i;
+y1=0;
+x1=0;
+scanf(" %f %f %f %f %d %d",&x0,&y0,&dx,&dy,&Np,&Nk);
+suma=0;
+
+for(i=Np;i<=Nk;i++)
+	{
+	x1=x0+(i*dx);
+	y1=y0-(i*dy);
+	suma=suma+f(x1,y1);
+	}
+printf("%f",suma);
+}
