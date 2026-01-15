@@ -1,0 +1,60 @@
+
+#include <stdio.h>
+#include <math.h>
+void homo(float tab[],int N)
+{
+    FILE *plik;
+    plik=fopen("gigahomo.txt","a");
+    
+    int i;
+    for(i=0;i<N;i++)
+    {
+        fprintf(plik,"%f",tab[i]);
+    }
+    fclose(plik);
+}
+void gej(float tab[],float *najM,float *najW, int N,int *najMi,int *najWi)
+{
+    int i;
+    float n;
+    *najM=tab[0];
+    *najW=tab[0];
+    for(i=0;i<N;i++)
+        {
+            if(*najM>tab[i])
+                {
+                    *najM=tab[i];
+                    *najMi=i;
+                }
+             if(*najW<tab[i])
+                {
+                    *najW=tab[i];
+                    *najWi=i;
+                }
+            
+        }
+}
+int main()
+{
+
+    float a0,a1,ai,najW,najM;
+    int N,i,najWi,najMi;
+    a0=3;
+    a1=2;
+    scanf("%d",&N);
+    float tab[N];
+    if(N>30)
+        {printf("sprubuj jeszcze raz");
+        return 0;
+        }
+    for(i=0;i<N;i++)
+    {
+        ai=cos(a1)+sin(a0);
+        tab[i]=ai;
+        a0=a1;
+        a1=ai;
+    }   
+    gej(tab,&najM,&najW,N,&najMi,&najWi);
+    homo(tab,N);
+return 0;
+}
