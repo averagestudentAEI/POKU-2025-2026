@@ -1,0 +1,54 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <math.h>
+void po_chuj(int N,float tab[N][N])
+{
+    int i,j;
+    for(i=0;i<N;i++)
+    {
+        for(j=0;j<N;j++)
+            printf("%f ", tab[i][j]);
+        printf("\n");
+    }   
+}
+void cwel(int N,float tab[N][N])
+    {
+    int i,j;
+    for(i=1;i<N;i++)
+        for(j=1;j<N;j++)
+            {
+                tab[i][j]=(tab[i-1][j]+tab[i][j-1])/2;
+            }
+    }
+void spierdalaj(int N,float tab[N][N])
+{
+    float s;
+    int n;
+    n=0;
+FILE *plik;
+plik=fopen("memyjeja.txt","r");
+while(fscanf(plik,"%f",&s)==1)
+    {
+        tab[n][0]=s;
+        tab[0][n]=s;
+        n++;
+    }
+fclose(plik);
+}
+int main()
+{
+ float a;
+    int N;
+    N=0;
+FILE *plik;
+plik=fopen("memyjeja.txt","r");
+while(fscanf(plik,"%f",&a)==1)
+    {
+        N++;
+    }
+      float tab[N][N];   
+    spierdalaj(N,tab);
+    cwel(N,tab);
+    po_chuj(N,tab);
+    return 0;
+}
